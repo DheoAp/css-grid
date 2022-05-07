@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Intro Grid</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body,
+      html {
+        margin: 0;
+        padding: 0;
+        font-size: 20px;
+        color: white;
+        text-transform: uppercase;
+        text-align: center;
+      }
+      .container {
+        border: 5px solid #333;
+        margin: 50px auto;
+        width: 600px;
+        padding: 5px;
+        display: grid; /* 1. jadikan container pembungkus grid */
+        grid-template-areas:
+          "header header"
+          "aside main"
+          "nav main"
+          "footer footer"; /* 2. beri nama area */
+        grid-template-columns: 1fr 1.5fr;  /* 3. beri ukurannya(untuk mengatur ukuran column nya) */
+        grid-template-rows: 1fr 1fr 1.3fr; /* 4. mengukuran dari tiap2 barisnya */
+      }
+      /* 4. selanjutnya petakan di tiap tiap item yang di dalam container */
+      header {
+        background-color: #b063db;
+        grid-area: header;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      aside {
+        grid-area: aside;
+        background-color: #2f93ff;
+        padding: 60px 0;
+      }
+      nav {
+        grid-area: nav;
+        background-color: #e45765;
+        padding: 100px 0;
+      }
+      main {
+        grid-area: main;
+        background-color: #e0aa77;
+      }
+      footer {
+        grid-area: footer;
+        background-color: #666;
+        padding: 20px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>Header</header>
+      <aside>Aside</aside>
+      <nav>Nav</nav>
+      <main>Main</main>
+      <footer>Footer</footer>
+    </div>
+  </body>
+</html>

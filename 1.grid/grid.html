@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grid</title>
+    <style>
+      .container {
+        border: 5px solid black;
+        width: 70%;
+        margin: auto;
+        display: grid;
+        grid-template-areas: 
+        "header header"
+        "side main"
+        "footer footer";
+        grid-template-columns: 1fr 1.5fr;
+        grid-template-rows: 1.5fr 150px 1fr;
+      }
+      .header {
+        padding: 10px 0;
+        text-align: center;
+        grid-area: header;
+        background-color: lightcoral;
+      }
+      .sidebar {
+        display: flex;
+        align-items: center;
+        grid-area: side;
+        background-color: lightsalmon;
+      }
+      .main{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        grid-area: main;
+        background-color: lightseagreen;
+      }
+      .footer{
+        text-align: center;
+        grid-area: footer;
+        background-color: darkgoldenrod;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">Header</div>
+      <div class="sidebar">sidebar</div>
+      <div class="main">main</div>
+      <div class="footer">footer</div>
+    </div>
+  </body>
+</html>
